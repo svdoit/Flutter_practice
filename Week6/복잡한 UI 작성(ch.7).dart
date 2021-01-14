@@ -92,18 +92,52 @@ class Page1 extends StatelessWidget {
         _buildTop(),
         _buildMiddle(),
         _buildBottom(),
-        Center(
-          child: Text(
-            '홈 페이지',
-            style: TextStyle(fontSize: 40),
-          ),
-        ),
       ],
     );
   }
 
   Widget _buildTop(){
-    return Text('Top');
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Column(
+          children: <Widget>[
+            Icon(
+                Icons.local_taxi,
+                size: 40,
+            ),
+            Text('택시'),
+          ],
+        ),
+        Column(
+          children: <Widget>[
+            Icon(
+              Icons.local_taxi,
+              size: 40,
+            ),
+            Text('블랙'),
+          ],
+        ),
+        Column(
+          children: <Widget>[
+            Icon(
+              Icons.local_taxi,
+              size: 40,
+            ),
+            Text('바이크'),
+          ],
+        ),
+        Column(
+          children: <Widget>[
+            Icon(
+              Icons.local_taxi,
+              size: 40,
+            ),
+            Text('대리'),
+          ],
+        ),
+      ],
+    );
   }
 
   Widget _buildMiddle(){
