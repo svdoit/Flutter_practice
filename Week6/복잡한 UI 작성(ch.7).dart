@@ -102,41 +102,61 @@ class Page1 extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Column(
-              children: <Widget>[
-                Icon(
+            GestureDetector(
+              onTap: () {
+                print('클릭');
+              },
+                child: Column(
+                  children: <Widget>[
+                    Icon(
+                      Icons.local_taxi,
+                      size: 40,
+                    ),
+                    Text('택시'),
+                  ],
+                )
+            ),
+            GestureDetector(
+              onTap: () {
+              print('클릭');
+              },
+              child: Column(
+                children: <Widget>[
+                  Icon(
                     Icons.local_taxi,
                     size: 40,
-                ),
-                Text('택시'),
-              ],
+                  ),
+                  Text('블랙'),
+                ],
+              ),
             ),
-            Column(
-              children: <Widget>[
-                Icon(
-                  Icons.local_taxi,
-                  size: 40,
-                ),
-                Text('블랙'),
-              ],
+            GestureDetector(
+              onTap: () {
+                print('클릭');
+              },
+              child: Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size: 40,
+                  ),
+                  Text('바이크'),
+                ],
+              ),
             ),
-            Column(
-              children: <Widget>[
-                Icon(
-                  Icons.local_taxi,
-                  size: 40,
-                ),
-                Text('바이크'),
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                Icon(
-                  Icons.local_taxi,
-                  size: 40,
-                ),
-                Text('대리'),
-              ],
+            GestureDetector(
+              onTap: () {
+                print('클릭');
+              },
+              child: Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size: 40,
+                  ),
+                  Text('대리'),
+                ],
+              ),
             ),
           ],
         ),
@@ -150,32 +170,47 @@ class Page1 extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Column(
-              children: <Widget>[
-                Icon(
-                  Icons.local_taxi,
-                  size: 40,
-                ),
-                Text('택시'),
-              ],
+            GestureDetector(
+              onTap: () {
+                print('클릭');
+              },
+              child: Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size: 40,
+                  ),
+                  Text('택시'),
+                ],
+              ),
             ),
-            Column(
-              children: <Widget>[
-                Icon(
-                  Icons.local_taxi,
-                  size: 40,
-                ),
-                Text('블랙'),
-              ],
+            GestureDetector(
+              onTap: () {
+                print('클릭');
+              },
+              child: Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size: 40,
+                  ),
+                  Text('블랙'),
+                ],
+              ),
             ),
-            Column(
-              children: <Widget>[
-                Icon(
-                  Icons.local_taxi,
-                  size: 40,
-                ),
-                Text('바이크'),
-              ],
+            GestureDetector(
+              onTap: () {
+                print('클릭');
+              },
+              child: Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size: 40,
+                  ),
+                  Text('바이크'),
+                ],
+              ),
             ),
             Opacity(
               opacity : 0.0,
