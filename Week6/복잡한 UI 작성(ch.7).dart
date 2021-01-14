@@ -97,43 +97,95 @@ class Page1 extends StatelessWidget {
   }
 
   Widget _buildTop(){
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Column(
       children: [
-        Column(
-          children: <Widget>[
-            Icon(
-                Icons.local_taxi,
-                size: 40,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: <Widget>[
+                Icon(
+                    Icons.local_taxi,
+                    size: 40,
+                ),
+                Text('택시'),
+              ],
             ),
-            Text('택시'),
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('블랙'),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('바이크'),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('대리'),
+              ],
+            ),
           ],
         ),
-        Column(
-          children: <Widget>[
-            Icon(
-              Icons.local_taxi,
-              size: 40,
-            ),
-            Text('블랙'),
-          ],
+
+        //중간 여백
+        SizedBox(
+          height: 20,
         ),
-        Column(
-          children: <Widget>[
-            Icon(
-              Icons.local_taxi,
-              size: 40,
+
+        //둘째 줄
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('택시'),
+              ],
             ),
-            Text('바이크'),
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            Icon(
-              Icons.local_taxi,
-              size: 40,
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('블랙'),
+              ],
             ),
-            Text('대리'),
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('바이크'),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('대리'),
+              ],
+            ),
           ],
         ),
       ],
