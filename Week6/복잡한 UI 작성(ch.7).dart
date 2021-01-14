@@ -2,6 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+final dummyItems = [
+  'assets/1.jpg',
+  'assets/2.jpg',
+  'assets/3.jpg',
+];
 
 void main() {
   runApp(MyApp());
@@ -237,17 +242,23 @@ class Page1 extends StatelessWidget {
 
   Widget _buildMiddle(){
     return CarouselSlider(
-      options: CarouselOptions(height: 400.0),
-      items: [1,2,3,4,5].map((i) {
+      options: CarouselOptions(
+          autoPlay: true,
+          height: 150.0
+      ),
+      items: dummyItems.map((url) {
         return Builder(
           builder: (BuildContext context) {
             return Container(
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.symmetric(horizontal: 5.0),
-                decoration: BoxDecoration(
-                    color: Colors.amber
+                child:ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    url,
+                    fit:BoxFit.cover,
+                  ),
                 ),
-                child: Text('text $i', style: TextStyle(fontSize: 16.0),)
             );
           },
         );
