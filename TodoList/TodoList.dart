@@ -61,7 +61,7 @@ class _TodoListPageState extends State<TodoListPage> {
                   ),
                   RaisedButton(
                       child: Text('추가'),
-                      onPressed: (){},
+                      onPressed: () => _addTodo(Todo(_todoController.text)),
                   ),
                 ],
               ),
@@ -78,7 +78,7 @@ class _TodoListPageState extends State<TodoListPage> {
 
   Widget _buildItemWidget(Todo todo){
     return ListTile(
-      onTap: (){}, // Todo클릭 시 완료/취소되도록 수정
+      onTap: () => _toggleTodo(todo), // Todo클릭 시 완료/취소되도록 수정
       title: Text(
         todo.title, //할 일
         style: todo.isDone //완료일 때는 스타일 적용
@@ -90,7 +90,7 @@ class _TodoListPageState extends State<TodoListPage> {
       ),
       trailing: IconButton(
         icon: Icon(Icons.delete_forever),
-        onPressed: (){}, //Todo쓰레기통 클릭 시 삭제되도록 수정
+        onPressed: () => _deleteTodo(todo), //Todo쓰레기통 클릭 시 삭제되도록 수정
       ),
     );
   }
