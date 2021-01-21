@@ -31,6 +31,17 @@ class TodoListPage extends StatefulWidget {
 }
 
 class _TodoListPageState extends State<TodoListPage> {
+
+  final _items = <Todo>[]; //할 일 목록 저장
+
+  var _todoController = TextEditingController(); // 할 일 문자열 조작을 위한 컨트롤러
+
+  @override
+  void dispose(){
+    _todoController.dispose(); //사용이 끝나면 해제
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
